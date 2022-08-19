@@ -20,17 +20,15 @@ export default {
       ],
     };
   },
-  asyncData({ $axios, error }) {
-    return $axios
-      .get("http://localhost:3000/events")
-      .then((response) => {
-        return {
-          events: response.data,
-        };
-      })
-      .catch((e) => {
-        error({ statusCode: 503, message: "unable to fetch events" });
-      });
+  async asyncData({ $axios, error }) {
+    try {
+      const { data } = await $axios.get("http://localhost:3000/events");
+      return {
+        events: data,
+      };
+    } catch (e) {
+      error({ statusCode: 503, message: "unable to fetch events" });
+    }
   },
 };
 </script>
