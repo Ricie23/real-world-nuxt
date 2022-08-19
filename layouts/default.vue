@@ -11,6 +11,18 @@ export default {
   components: {
     NavBar,
   },
+  head() {
+    return {
+      titleTemplate: "%s - Real World Nuxt",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "where you can find all the events.",
+        },
+      ],
+    };
+  },
 };
 </script>
 

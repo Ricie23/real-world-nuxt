@@ -1,18 +1,17 @@
 <template>
-  <h1>Events</h1>
+  <h1>Create an Event</h1>
 </template>
 
 <script>
 export default {
-  name: "IndexPage",
   head() {
     return {
-      title: "Event Listing",
+      title: "Event Creation",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "where you can find all the events.",
+          content: "where you can create all the events.",
         },
       ],
     };
